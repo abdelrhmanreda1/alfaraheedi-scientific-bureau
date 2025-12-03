@@ -69,19 +69,20 @@ const Navbar = () => {
     <>
       <nav
         className={clsx(
-          "fixed top-0 left-0 w-full z-50 shadow-md transition-transform duration-300",
-          "bg-gradient-to-r from-[#1A7250] to-[#23A6A6]",
+          "fixed top-0 left-0 w-full z-50 transition-all duration-300  ",
+          "backdrop-blur-xl bg-[#14658B] shadow-lg ",
+          "border-b border-white/10",
           !showNavbar && "translate-y-[-100%]"
         )}
       >
-        <div className="w-[90%] mx-auto flex justify-between items-center px-1 md:px-6 py-1 md:py-3">
+        <div className="w-[90%] mx-auto flex justify-between items-center px-1 md:px-4 py-2 md:py-3">
           <Link href="/">
             <Image
-              src="/Alfarahidi-logo.png"
+              src="/logowhite.png"
               alt="Company Logo"
-              width={120}
-              height={70}
-              className="max-h-18 object-cover w-[120px] md:w-[160px]"
+              width={150}
+              height={60}
+              className="object-contain h-[40px] md:h-[55px] w-auto"
             />
           </Link>
 
@@ -120,10 +121,11 @@ const Navbar = () => {
                 href="/#contact"
                 onClick={() => setActive("Contact")}
                 className={clsx(
-                  "ml-3 px-6 py-2 rounded-full font-semibold transition-all duration-300",
-                  "bg-[#7BCF34] text-[#0A3C52]",
-                  "shadow-md hover:shadow-xl hover:scale-[1.04] hover:brightness-110 uppercase",
-                  active === "Contact" && "ring-2 ring-white/70"
+                  "ml-3 px-6 py-2 rounded-full font-semibold uppercase tracking-wide",
+                  "text-[#0A3C52] bg-white border border-white/70",
+                  "transition-all duration-200",
+                  "hover:bg-[#F3F9FC] hover:border-white hover:scale-[1.03]",
+                  active === "Contact" && "bg-white text-[#0A3C52]"
                 )}
               >
                 Contact Us
@@ -186,7 +188,7 @@ const Navbar = () => {
 
       {/* WhatsApp Button */}
       <motion.a
-        href="https://wa.me/+9647738651046"
+        href="https://wa.me/+964 773 865 1046"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ boxShadow: "0 0 0px rgba(37, 211, 102, 0.7)" }}

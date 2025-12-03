@@ -11,19 +11,19 @@ const Footer = () => {
         {/* About Section */}
         <div className="flex flex-col gap-4 mt-[-10px]  md:px-9">
           {/* Logo */}
-          <div className="relative w-28 h-16">
+          <div className="relative w-[180px] md:w-[220px] h-15 md:ml-0 -ml-4">
             <Image
               src="/logo-black.png"
               alt="logo for company"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
           {/* Description */}
-          <p className=" text-gray-600 leading-relaxed w-[52%]">
-            Providing trusted medical services and innovative solutions to
-            improve healthcare and enhance patients’ lives.
+          <p className="text-gray-600 leading-relaxed md:w-[52%] w-full">
+            Advancing pharmaceutical excellence through trusted partnerships,
+            scientific integrity, and a commitment to better healthcare in Iraq.
           </p>
         </div>
 
@@ -105,8 +105,9 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="bg-[#013E5D] text-white text-center py-2 text-sm ">
-        © {new Date().getFullYear()} MWA Medicine. All rights reserved.
+      <div className="bg-[#013E5D] text-white text-center py-2 text-sm">
+        © {new Date().getFullYear()} Al-Farahidi Scientific Bureau. All rights
+        reserved.
       </div>
     </footer>
   );

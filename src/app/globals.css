@@ -320,7 +320,7 @@ footer {
   border: 1px solid rgba(1, 62, 93, 0.25);
   overflow: hidden;
   backdrop-filter: blur(8px);
-  box-shadow: 0 0 35px rgba(1, 62, 93, 0.25);
+  box-shadow: 0 0 10px rgba(1, 62, 93, 0.25);
 }
 
 /* PULSE RING */

@@ -14,37 +14,48 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "MWA Medicine - Premium Medical Products",
+  title: "Al-Faraheedi Scientific Bureau – Pharmaceutical Marketing in Iraq",
   description:
-    "Explore MWA Medicine’s wide range of premium medical products and supplements designed to support your health and wellbeing. Trusted quality and effective solutions.",
+    "Al-Faraheedi Scientific Bureau, based in Basra–Iraq, specializes in scientific promotion and pharmaceutical marketing. We connect high-quality international medicines with the needs of healthcare professionals through strong scientific communication and ethical market presence.",
+
   keywords:
-    "MWA Medicine, medical products, health supplements, orthopedic, neurology, gynecology, internal medicine, wellness, healthcare",
-  authors: [{ name: "MWA Medicine", url: "https://mwamedicine.vercel.app/" }],
+    "Al-Faraheedi Scientific Bureau, pharmaceutical marketing Iraq, Basra pharma, scientific office Iraq, medical promotion, pharmaceutical products Iraq, healthcare Iraq, drug suppliers Iraq, medical representatives Iraq",
+
+  authors: [
+    {
+      name: "Al-Faraheedi Scientific Bureau",
+      url: "https://alfaraheedi-scientific-bureau.vercel.app/",
+    },
+  ],
+
   openGraph: {
-    title: "MWA Medicine - Premium Medical Products",
+    title:
+      "Al-Faraheedi Scientific Bureau – Trusted Pharmaceutical Marketing in Iraq",
     description:
-      "Explore MWA Medicine’s wide range of premium medical products and supplements designed to support your health and wellbeing.",
-    url: "https://mwamedicine.vercel.app/",
-    siteName: "MWA Medicine",
+      "Learn about Al-Faraheedi Scientific Bureau — a leading pharmaceutical scientific office in Basra, Iraq, specializing in high-quality medical promotion, market access, and international partnerships.",
+    url: "https://alfaraheedi-scientific-bureau.vercel.app/",
+    siteName: "Al-Faraheedi Scientific Bureau",
     images: [
       {
-        url: "https://mwamedicine.vercel.app/logowhite.png",
+        url: "https://alfaraheedi-scientific-bureau.vercel.app/logo-black.png",
         width: 1200,
         height: 630,
-        alt: "MWA Medicine Logo",
+        alt: "Al-Faraheedi Scientific Bureau Logo",
       },
     ],
     locale: "en_US",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "MWA Medicine - Premium Medical Products",
+    title: "Al-Faraheedi Scientific Bureau – Pharmaceutical Marketing in Iraq",
     description:
-      "Explore MWA Medicine’s wide range of premium medical products and supplements designed to support your health and wellbeing.",
-    images: ["https://mwamedicine.vercel.app/logowhite.png"],
-    creator: "@MWAMedicine",
+      "Introducing high-quality pharmaceutical products to Iraq with scientific accuracy, ethical promotion, and global partnerships.",
+    images: ["https://alfaraheedi-scientific-bureau.vercel.app/logo-black.png"],
+    creator: "@AlFaraheedi",
   },
+
   robots: {
     index: true,
     follow: true,

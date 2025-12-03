@@ -258,7 +258,7 @@ const AllProducts = () => {
           /* -------- COMING SOON -------- */
           <div className="flex flex-col items-center justify-center py-6 md:py-12 px-0 md:px-6 text-center">
             {/* Brand Box */}
-            <div className="bg-white border border-[#d4e4ee] shadow-xl rounded-3xl p-10 w-full max-w-lg">
+            <div className="bg-white border border-[#d4e4ee] shadow rounded-3xl p-10 w-full max-w-lg">
               {/* Brand Initial Circle */}
               <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-[#013E5D] text-white text-4xl font-bold tracking-tight shadow-md">
                 {emptyBrandSelected.brand[0]}

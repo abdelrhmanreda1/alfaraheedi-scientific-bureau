@@ -1,13 +1,13 @@
 import AboutUs from "@/components/Home/AboutUs";
 import ContactSection from "@/components/Home/ContactSection";
+import Hero from "@/components/Home/Hero";
 
-import Slider from "@/components/Home/Slider";
 import React from "react";
 
 function page() {
   return (
     <>
-      <Slider />
+      <Hero />
       <AboutUs />
 
       <ContactSection />
