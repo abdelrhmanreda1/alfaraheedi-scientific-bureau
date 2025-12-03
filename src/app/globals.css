@@ -1,0 +1,398 @@
+@import "tailwindcss";
+
+/* ------------------------------
+   Root Colors — Identity System
+------------------------------ */
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Brand Colors */
+  --brand-dark: #0a3c52; /* الأزرق الداكن */
+  --brand-blue: #1592a6; /* الأزرق الطبي */
+  --brand-light: #5ecbff; /* الأزرق الفاتح */
+  --brand-green: #7bcf34; /* الأخضر للـ CTA */
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+@keyframes gradientText {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradientText {
+  animation: gradientText 4s ease infinite;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+.animate-shine {
+  animation: shine 2.5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #1ba4e8, 0 0 10px #1ba4e8, 0 0 20px #1ba4e8;
+  }
+  50% {
+    text-shadow: 0 0 12px #4fd1ff, 0 0 25px #4fd1ff, 0 0 40px #4fd1ff;
+  }
+  100% {
+    text-shadow: 0 0 5px #1ba4e8, 0 0 10px #1ba4e8, 0 0 20px #1ba4e8;
+  }
+}
+
+.neon-text {
+  color: #013e5d;
+  animation: neonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.sweep-light {
+  animation: lightSweep 2.8s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+@keyframes waveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.wave-text {
+  background-image: linear-gradient(90deg, #013e5d, #0ea5e9, #38bdf8, #013e5d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: waveGradient 3s ease infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursorBlink {
+  0%,
+  50% {
+    border-color: transparent;
+  }
+  51%,
+  100% {
+    border-color: #013e5d;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #013e5d;
+  animation: typing 2.5s steps(20), cursorBlink 0.7s infinite step-end alternate;
+}
+
+/* ------------------------------
+   Gradient Animation (For Navbar)
+------------------------------ */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 80% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animate-gradientMove {
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease-in-out infinite;
+}
+
+/* ------------------------------
+   Slide Down (Mobile Menu)
+------------------------------ */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
+}
+
+/* ------------------------------
+   Scrollbar Styling — Updated Colors
+------------------------------ */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-blue) #f7fbfd;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: #f7fbfd;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, var(--brand-blue), var(--brand-light));
+  border-radius: 6px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #0f7d94, #38c4f4);
+}
+
+/* ------------------------------
+   Marquee Animation
+------------------------------ */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 30s linear infinite;
+}
+
+/* ------------------------------
+   Fade Up (General Animations)
+------------------------------ */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Remove Number Input Spinners */
+.no-spinner::-webkit-outer-spin-button,
+.no-spinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.no-spinner {
+  appearance: textfield;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  border: none;
+  outline: none;
+}
+
+/* ------------------------------
+   Global Layout Height
+------------------------------ */
+html,
+body,
+#__next {
+  height: 100%;
+}
+
+/* ------------------------------
+   Background — Updated Medical Gradient
+------------------------------ */
+body {
+  background: linear-gradient(to bottom, #f7fbfd, #e6f3fa, #dff3fc);
+}
+
+/* Layout Flex Adjustments */
+#__next {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+.glare-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 18px 40px;
+  border-radius: 20px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.05)
+  );
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.glare-text {
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #013e5d;
+  position: relative;
+  z-index: 2;
+}
+
+.glare-effect {
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 130%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: glareMove 3.5s ease-in-out infinite;
+}
+
+@keyframes glareMove {
+  0% {
+    left: -130%;
+  }
+  60% {
+    left: 130%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+.coming-box {
+  position: relative;
+  padding: 24px 50px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(1, 62, 93, 0.12),
+    rgba(1, 62, 93, 0.08)
+  );
+  border: 1px solid rgba(1, 62, 93, 0.25);
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 35px rgba(1, 62, 93, 0.25);
+}
+
+/* PULSE RING */
+.coming-box::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  border: 2px solid rgba(1, 62, 93, 0.5);
+  animation: pulseRing 3s infinite ease-out;
+  opacity: 0.6;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.08;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* GLOW SWEEP */
+.glow-sweep {
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 130%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 100%
+  );
+  filter: blur(8px);
+  animation: sweepMove 3.8s infinite ease-in-out;
+  transform: skewX(-20deg);
+}
+
+@keyframes sweepMove {
+  0% {
+    left: -150%;
+  }
+  40% {
+    left: 140%;
+  }
+  100% {
+    left: 140%;
+  }
+}
+
+/* TEXT */
+.coming-text {
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  color: #013e5d;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  text-shadow: 0px 0px 8px rgba(1, 62, 93, 0.25);
+}
+
+@media (max-width: 640px) {
+  .coming-box{
+        padding: 24px 30px;
+  } 
+}
