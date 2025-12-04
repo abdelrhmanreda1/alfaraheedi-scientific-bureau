@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mwamedicine.vercel.app
+Host: https://alfaraheedi-scientific-bureau.vercel.app
 
 # Sitemaps
-Sitemap: https://mwamedicine.vercel.app/sitemap.xml
+Sitemap: https://alfaraheedi-scientific-bureau.vercel.app/sitemap.xml

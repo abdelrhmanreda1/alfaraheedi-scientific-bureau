@@ -24,7 +24,7 @@ const AboutUs = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#024d75] tracking-wide">
             About Us
           </h2>
-          <div className="w-28 h-1 bg-gradient-to-r from-[#26b2df] to-[#0275aa] mx-auto mt-3 rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-[#1A7250] to-[#23A6A6] mx-auto mt-5 rounded-full"></div>
         </div>
 
         {/* MAIN GRID */}

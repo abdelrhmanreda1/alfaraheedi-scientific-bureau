@@ -13,8 +13,8 @@ const ContactSection = () => {
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#035182] mb-3">
             Contact Us
           </h2>
-          <span className="block w-28 h-1 bg-gradient-to-r from-[#5ecbff] to-[#0389d2] mx-auto mb-8 rounded-full"></span>
-          <p className="mt-2 text-[#475569] text-lg max-w-2xl mx-auto">
+          <div className="w-32 h-1 bg-gradient-to-r from-[#1A7250] to-[#23A6A6] mx-auto mt-5 rounded-full"></div>
+          <p className="mt-2 text-[#475569] text-[15px] md:text-lg max-w-2xl mx-auto">
             Get in touch with us for inquiries or partnership opportunities.
           </p>
         </div>
