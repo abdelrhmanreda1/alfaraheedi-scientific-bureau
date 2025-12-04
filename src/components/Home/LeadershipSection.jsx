@@ -29,7 +29,10 @@ const leaders = [
 
 const LeadershipSection = () => {
   return (
-    <section className="  py-12 bg-[#F2F7FA]" id="leadership">
+    <section
+      className="py-12 md:py-20 bg-gradient-to-b from-[#E9F3F8] via-[#F5FAFC] to-white"
+      id="leadership"
+    >
       <div className="max-w-7xl mx-auto px-4 mb-20 text-center">
         <h2 className="text-4xl md:text-5xl font-extrabold text-[#023E58] tracking-tight">
           Leadership Team
@@ -51,7 +54,7 @@ const LeadershipSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
             viewport={{ once: true }}
-            className="relative bg-white/60 backdrop-blur-xl rounded-3xl border border-white/40 shadow-[0px_15px_40px_rgba(0,0,0,0.08)] overflow-hidden hover:shadow-[0px_20px_55px_rgba(0,0,0,0.14)] transition-all duration-500"
+            className="relative bg-white/60 backdrop-blur-xl rounded-3xl border border-white/40 shadow-[0px_15px_40px_rgba(0,0,0,0.08)] overflow-hidden  transition-all duration-500"
           >
             {/* Decorative Gradient Circle */}
             <div className="absolute -top-20 -right-20 w-72 h-72 bg-gradient-to-br from-[#23A6A6]/30 to-[#1A7250]/10 rounded-full blur-2xl"></div>

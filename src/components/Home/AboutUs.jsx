@@ -17,7 +17,7 @@ const premiumCard =
 
 const AboutUs = () => {
   return (
-    <section id="about" className="relative bg-[#f2f9ff] py-20 px-5 md:px-10">
+    <section id="about" className="relative bg-[#f2f9ff] py-12 md:py-20 px-5 md:px-10">
       <div className="w-[95%] md:w-[85%] mx-auto">
         {/* Title */}
         <div className="text-center mb-16">
@@ -78,13 +78,7 @@ const AboutUs = () => {
           </motion.div>
 
           {/* RIGHT – IMAGE */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true }}
-            className="flex justify-center order-1 md:order-2"
-          >
+          <div className="flex justify-center order-1 md:order-2">
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-[#d6ecf7]">
               <Image
                 src="/about.jpeg"
@@ -94,7 +88,7 @@ const AboutUs = () => {
                 className="object-cover w-full"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* MISSION & VISION */}

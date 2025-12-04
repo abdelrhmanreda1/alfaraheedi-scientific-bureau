@@ -145,7 +145,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <ul className="md:hidden flex flex-col gap-4 text-white font-medium text-base px-6 pt-4 pb-5 bg-[#0A3C52]/95 backdrop-blur-md animate-slideDown">
+          <ul className="md:hidden flex  flex-col gap-4 text-white font-medium text-base px-6 pt-4 pb-5 bg-[#056087] backdrop-blur-md animate-slideDown">
             {navLinks.map((link) => (
               <li key={link.name}>
                 <Link
@@ -155,7 +155,7 @@ const Navbar = () => {
                     setIsOpen(false);
                   }}
                   className={clsx(
-                    "block py-2 px-3 rounded transition",
+                    "block py-2 px-3 rounded transition text-center",
                     active === link.name
                       ? "bg-white text-[#0A3C52] font-semibold"
                       : "hover:bg-white/10"
