@@ -80,7 +80,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p1.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Herbal sleep support formula containing Valerian & Passiflora extracts, designed to improve sleep quality, reduce anxiety, and enhance relaxation naturally.",
 
@@ -246,7 +247,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p2.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Herbal digestive formula designed to relieve gas, bloating, indigestion, and mild constipation through a well-balanced natural blend that supports healthy bowel movement and gut comfort.",
 
@@ -410,7 +412,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p3.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Triple-action formula combining Butyric Acid, FOS prebiotics, and Bifidobacterium probiotics for restoring gut balance, improving IBS symptoms, and enhancing bowel regularity.",
 
@@ -547,7 +550,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p4.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Advanced digestive support formula combining enzymes, herbal extracts, and acid-neutralizing agents for fast relief from indigestion, acidity, and reflux.",
 
@@ -740,7 +744,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p5.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Dual-form support (capsules + vaginal/oral tablets) designed to restore and stabilize vaginal flora, prevent recurrent infections, and rebalance microbiota using probiotics, garlic extract, and grapefruit bioflavonoids.",
 
@@ -905,7 +910,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p6.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Effervescent neuro-energy formula designed to boost focus, memory, and mental performance using Citicoline, Ginkgo Biloba, Ginseng, and essential B-vitamins for fast cognitive enhancement.",
 
@@ -1074,7 +1080,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p7.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Ultra-microencapsulated iron (FERNANO®) designed for maximum absorption with zero gastric side effects. Gentle, highly bioavailable, and can be taken without water.",
 
@@ -1259,7 +1266,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p8.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Triple-layer Italian intimate wash designed to balance vaginal pH, soothe irritation, provide long-lasting freshness, and protect the intimate area with natural extracts.",
 
@@ -1422,7 +1430,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p9.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Ultra-micro emulsified prostate formula containing Serenoa, Pygeum, and Epilobium to improve urinary flow, reduce nocturia, and support prostate health with fast absorption.",
 
@@ -1584,7 +1593,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p10.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "High-dose Vitamin B12 (Cyanocobalamin) in fast-dissolving sublingual tablets for rapid absorption, improved energy, neurological support, and treatment of B12 deficiency.",
 
@@ -1703,7 +1713,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p11.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "A comprehensive energy and performance formula combining Ginseng, Arginine, DMG, Royal Jelly, B-vitamins, Blueberry, Magnesium, and Potassium to boost energy, fight fatigue, and enhance physical and mental performance.",
 
@@ -1881,7 +1892,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p12.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "A fast-absorbing electrolyte and energy support formula designed to restore hydration, prevent fatigue, and enhance muscle and nerve function with Magnesium, Potassium, Vitamin B Complex, and Taurine.",
 
@@ -2040,7 +2052,8 @@ export const productsData = [
     brand: "Pharmilano",
     image: "/p13.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Advanced urinary tract formulation containing Cranberry, D-Mannose, Potassium Citrate & Hibiscus extract. Helps prevent UTIs, reduces burning urination, improves urine flow, and supports kidney health.",
 
@@ -3749,10 +3762,12 @@ export const productsData = [
     department: "Antibiotics",
     category: "Antibacterial",
     brand: "CT Italy",
+
     image: "/p24.png", // غيّرها حسب اسم الصورة عندك
 
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Third-generation cephalosporin antibiotic in lyophilized form, providing high stability, strong antibacterial coverage, and improved patient tolerance.",
 
@@ -3885,7 +3900,8 @@ export const productsData = [
     brand: "CT Italy",
     image: "/p25.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "Fast-acting, centrally acting muscle relaxant containing Thiocolchicoside 4mg/2ml for acute painful muscle spasms with minimal sedation.",
 
@@ -4029,7 +4045,8 @@ export const productsData = [
     brand: "CT Italy",
     image: "/p26.png",
     isNew: false,
-
+    origin: "Italy",
+    distributionType: "Distributor",
     shortDesc:
       "High-potency Citicoline 500mg/4ml IM–IV injectable solution for stroke recovery, cognitive decline, traumatic brain injury, and neuroprotection.",
 

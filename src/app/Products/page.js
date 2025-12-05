@@ -32,18 +32,19 @@ const AllProducts = () => {
     setCurrentPage(1);
   };
 
-  // 🔎 تحديد لو البراند من البراندات الفاضية Coming Soon
+  // Italian brands (Distributor only)
+  const italianBrands = ["CT Italy", "Pharmilano"];
+
+  // identify selected empty brand
   const emptyBrandSelected = emptyBrands.find((b) => b.brand === filterOption);
 
   const filteredAndSortedProducts = useMemo(() => {
     let filtered = [...productsData];
 
-    // BRAND FILTER
     if (filterOption !== "All Companies") {
       filtered = filtered.filter((product) => product.brand === filterOption);
     }
 
-    // Normalization
     const normalizeText = (text) =>
       (text || "")
         .toLowerCase()
@@ -51,7 +52,6 @@ const AllProducts = () => {
         .replace(/\s+/g, " ")
         .trim();
 
-    // SEARCH
     if (searchTerm.trim() !== "") {
       const terms = normalizeText(searchTerm)
         .split(" ")
@@ -71,7 +71,6 @@ const AllProducts = () => {
       });
     }
 
-    // SORTING
     switch (sortOption) {
       case "Newest":
         filtered.sort((a, b) => b.id - a.id);
@@ -110,14 +109,34 @@ const AllProducts = () => {
       <div className="w-[90%] mx-auto py-12">
         {/* -------- Header -------- */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-10 mt-[120px]">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#013E5D] mb-4 md:mb-0 uppercase">
-            {filterOption === "All Companies"
-              ? "All Companies"
-              : `${filterOption} Products`}
-          </h2>
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold text-[#013E5D] uppercase">
+              {filterOption === "All Companies"
+                ? "All Companies"
+                : `${filterOption} Products`}
+            </h2>
+
+            {/* ✨✨ NEW: Show distributor + origin ONLY for Italian brands ✨✨ */}
+            {italianBrands.includes(filterOption) && (
+              <div className="mt-3 p-3 bg-white/70 backdrop-blur-md rounded-lg border border-gray-200 max-w-xs shadow-sm">
+               
+           
+
+                {/* Origin */}
+                <p className="text-sm text-[#013E5D] font-semibold">
+                  Origin:{" "}
+                  <span className="font-normal text-gray-700">Italy</span>
+                </p>
+
+                {/* Distributor */}
+                <p className="text-sm text-[#013E5D] font-semibold mt-1">
+                  Distributor
+                </p>
+              </div>
+            )}
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 w-[82%] sm:w-auto">
-            {/* Search */}
             <input
               type="text"
               placeholder="Search products..."
@@ -127,7 +146,6 @@ const AllProducts = () => {
             />
 
             <div className="flex gap-6">
-              {/* SORTING */}
               <select
                 className="border border-gray-300 rounded-lg px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#013E5D]"
                 value={sortOption}
@@ -139,7 +157,6 @@ const AllProducts = () => {
                 <option value="Z-A">Z - A</option>
               </select>
 
-              {/* BRAND FILTER */}
               <select
                 className="capitalize border border-gray-300 rounded-lg px-3 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-[#013E5D]"
                 value={filterOption}
@@ -147,7 +164,6 @@ const AllProducts = () => {
               >
                 <option value="All Companies">All Companies</option>
 
-                {/* دمج البراندات العادية + البراندات الفاضية */}
                 {[
                   ...new Set(productsData.map((p) => p.brand)),
                   ...emptyBrands.map((b) => b.brand),
@@ -164,7 +180,6 @@ const AllProducts = () => {
         {/* -------- Products or Coming Soon -------- */}
         {currentItems.length > 0 ? (
           <>
-            {/* PRODUCTS GRID */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {currentItems.map((product, index) => (
                 <motion.div
@@ -193,9 +208,11 @@ const AllProducts = () => {
                     <h3 className="text-lg font-bold text-[#013E5D] mb-2">
                       {product.name}
                     </h3>
+
                     <p className="text-sm text-gray-600 line-clamp-2 mb-5">
                       {product.shortDesc}
                     </p>
+
                     <button
                       onClick={() => router.push(`/Products/${product.id}`)}
                       className="relative w-full py-3 rounded-xl bg-[#013E5D] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2 group"
@@ -211,7 +228,6 @@ const AllProducts = () => {
               ))}
             </div>
 
-            {/* PAGINATION */}
             {totalPages > 1 && (
               <div className="flex justify-center items-center gap-2 mt-12">
                 <button
@@ -255,36 +271,27 @@ const AllProducts = () => {
             )}
           </>
         ) : emptyBrandSelected ? (
-          /* -------- COMING SOON -------- */
           <div className="flex flex-col items-center justify-center py-6 md:py-12 px-0 md:px-6 text-center">
-            {/* Brand Box */}
             <div className="bg-white border border-[#d4e4ee] shadow rounded-3xl p-10 w-full max-w-lg">
-              {/* Brand Initial Circle */}
               <div className="mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-[#013E5D] text-white text-4xl font-bold tracking-tight shadow-md">
                 {emptyBrandSelected.brand[0]}
               </div>
 
-              {/* Brand Name */}
               <h2 className="mt-6 text-3xl font-bold text-[#013E5D] uppercase tracking-wide">
                 {emptyBrandSelected.brand}
               </h2>
 
-              {/* Divider line */}
               <div className="w-20 h-1 bg-[#013E5D] mx-auto rounded-full mt-4 mb-4"></div>
 
-              {/* Description */}
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 {emptyBrandSelected.message}
               </p>
 
-              {/* Professional boxed CTA */}
               <div className="coming-box mx-auto mt-10">
                 <span className="coming-text">COMING SOON</span>
-                <div className="glow-sweep"></div>
               </div>
             </div>
 
-            {/* Subtext */}
             <p className="text-gray-500 text-sm mt-6 max-w-md leading-relaxed">
               This brand is currently under development. Our medical team is
               preparing high-quality pharmaceutical solutions to join the
@@ -292,7 +299,6 @@ const AllProducts = () => {
             </p>
           </div>
         ) : (
-          /* -------- NO PRODUCT FOUND -------- */
           <div className="flex flex-col items-center justify-center text-center py-20">
             <Image
               src="/no-product-removebg.png"
